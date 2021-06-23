@@ -4,7 +4,7 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
 
-connection = pymysql.connect(host='localhost', user='root', password='gen0404', db='artdb', charset='utf8mb4', autocommit=True)
+connection = pymysql.connect(host='localhost', user='root', password='pw', db='artdb', charset='utf8mb4', autocommit=True)
 
 cursor = connection.cursor(pymysql.cursors.DictCursor)
 sql = "SELECT Genre, COUNT(*) AS Num FROM CONCERT WHERE StartDate > 20210000 GROUP BY Genre ORDER BY Num"
